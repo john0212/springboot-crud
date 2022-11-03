@@ -46,7 +46,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
         Session currentSession = entityManager.unwrap(Session.class);
 
         // get the employee
-        Employee theEmployee = currentSession.get(Employee.class,id);
+        Employee theEmployee = currentSession.get(Employee.class, id);
 
         // return the employee
         return theEmployee;
@@ -73,7 +73,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
         Query theQuery =
                 currentSession.createQuery(
                         "delete from Employee where id=:employeeId");
-        theQuery.setParameter("employeeId",id);
+        theQuery.setParameter("employeeId", id);
 
         theQuery.executeUpdate();
 
