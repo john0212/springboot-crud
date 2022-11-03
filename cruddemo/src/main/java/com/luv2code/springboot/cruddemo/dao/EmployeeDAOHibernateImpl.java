@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+// 這個 class 是用 Hibernate 方法來取得資料庫數據
+
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
